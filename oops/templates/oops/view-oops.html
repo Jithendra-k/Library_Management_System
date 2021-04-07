@@ -1,0 +1,23 @@
+{% extends "home/base.html" %}
+{% block content %}
+<h1>OOps</h1>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Year</th>
+    </tr>
+  </thead>
+    {% for j in olist %}
+     <tbody>
+    <tr class="table-danger">
+      <td>{{ j.o_name }}</td>
+      <td>{{ j.o_year }}</td>
+    </tr>
+{% endfor %}
+    </tbody>
+</table>
+<div>
+    <a href="{% url 'add-oops' %}"><button>Add-OOps-book</button></a>
+</div>
+{% endblock %}

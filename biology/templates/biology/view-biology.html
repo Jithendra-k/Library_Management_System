@@ -1,0 +1,23 @@
+{% extends "home/base.html" %}
+{% block content %}
+<h1>Biology</h1>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Year</th>
+    </tr>
+  </thead>
+    {% for j in blist %}
+     <tbody>
+    <tr class="table-danger">
+      <td>{{ j.b_name }}</td>
+      <td>{{ j.b_year }}</td>
+    </tr>
+{% endfor %}
+    </tbody>
+</table>
+<div>
+    <a href="{% url 'add-biology' %}"><button>Add-Biology-book</button></a>
+</div>
+{% endblock %}
