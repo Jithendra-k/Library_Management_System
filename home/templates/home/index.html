@@ -48,7 +48,9 @@
         <li><a href="#price" class="smoothScroll">MEMBERSHIP</a></li>
         <li><a href="#contact" class="smoothScroll">CONTACT</a></li>
         <li><a href="login" class="smoothScroll">LOGIN</a></li>
+        {% if user.is_authenticated %}
         <li><a href="logout" class="smoothScroll">LOGOUT</a></li>
+        {% endif %}
       </ul>
     </div>
   </div>
